@@ -181,8 +181,8 @@ public:
 			return {};
 		}
 
-		// Is the index specified more than the number of items, or is it negative? If so trigger a crash to analyze this bug..
-		if ( i > Count || i < 0 )
+		// Is the index specified more than the number of items? If so trigger a crash to analyze this bug..
+		if ( i > Count )
 			__fastfail( 0xBAD128 );
 
 		// Return the item.
