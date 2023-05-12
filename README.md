@@ -16,9 +16,23 @@ The code has not been through proper code review and hence might contain inconsi
 - IPI
 - ???
 
+# Compatibility
+- VBS / HyperGuard compliant.
+- PatchGuard (KPP) compliant.
+- Only supports Windows versions from **Windows 10 1709** to **Windows 11 22H2**.
+
+# Notes
+- [Includes/HyperDeceit.hpp](https://github.com/Xyrem/HyperDeceit/blob/main/Includes/HyperDeceit.hpp) is the header file which should be included in your project with the output library linked to use HyperDeceit.
+- Bugcheck information
+  |Code|Reason|
+  |-|-|
+  |0xBAD00001|Unsupported Windows version.|
+  |0xBAD00002|Provided kernel base address was null.|
+  |0xBAD00003|Unhandled code.|
+  |0xBAD00004|Failed to disassemble address.|
+
 # Examples
 - [Yumekage](https://github.com/Xyrem/Yumekage) is a demo proof of concept for creating hidden memory regions inside a process.
-
 
 # Credits
 - Vyacheslav Patkov for Hacker Disassembler Engine (HDE).
