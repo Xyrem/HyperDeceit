@@ -57,7 +57,7 @@ namespace HyperDeceit
 			Status = HyperV::OriginalHypercall( Command, Input, Output );
 
 		// Walk all user callbacks responsible for the command and invoke the callback.
-		for (int i = 0; i < UserCallbacks.Size(); i++)
+		for (uint32_t i = 0; i < UserCallbacks.Size(); i++)
 		{
 			// To avoid a race condition between unloading.
 			if (Unloading) return Status;
