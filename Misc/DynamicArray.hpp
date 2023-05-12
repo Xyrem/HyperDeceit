@@ -18,8 +18,8 @@ class DynamicArray
 {
 private:
 	T* Objects;
-	int Count;
-	int MaxCapacity;
+	uint32_t Count;
+	uint32_t MaxCapacity;
 	KSPIN_LOCK Spinlock;
 
 	/*
@@ -153,7 +153,7 @@ public:
 
 		KIRQL Irql = EnterLock( );
 		// Loop through the array in search of the item.
-		for ( int i = 0; i < Count; i++ )
+		for (uint32_t i = 0; i < Count; i++ )
 		{
 			if ( Objects[ i ] == Item )
 			{
@@ -171,7 +171,7 @@ public:
 	*	Get the item in the array with the index provided,
 	*	also do certain sanity checks.
 	*/
-	T operator[]( int i )
+	T operator[]( uint32_t i )
 	{
 		// Has the array not been initialized yet? If so, initialize and return nothing as there
 		// will not be any entries anyway.
@@ -192,7 +192,7 @@ public:
 	/*
 	*	Gets the number of items.
 	*/
-	int Size( )
+	uint32_t Size( )
 	{
 		return Count;
 	}
