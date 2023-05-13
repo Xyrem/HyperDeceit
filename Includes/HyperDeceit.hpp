@@ -63,8 +63,8 @@ namespace HyperDeceit
 	};
 
 	EHvDStatus HvDInitialize( _In_ uint64_t KernelBase );
-	EHvDStatus InsertCallback( _In_ HyperV::ECommand Cmd, _In_ void(*Callback)(uint64_t Input, uint64_t Output, uint64_t OldCR3) );
+	EHvDStatus HvDInsertCallback( _In_ HyperV::ECommand Cmd, _In_ void(*Callback)(uint64_t Input, uint64_t Output, uint64_t OldCR3) );
 	EHvDStatus HvDStop();
 
-	const char* GetStatusString( EHvDStatus Status );
+	const char* HvDGetStatusString( EHvDStatus Status );
 }
