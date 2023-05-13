@@ -79,7 +79,7 @@ namespace HyperDeceit
 	*	Inserts callback to intercept a specific hypercall, and also sets up additional stuff,
 	*	like englightenments, callbacks etc...
 	*/
-	EHvDStatus InsertCallback( _In_ HyperV::ECommand Cmd, _In_ void(*Callback)(uint64_t Input, uint64_t Output, uint64_t OldCR3) )
+	EHvDStatus HvDInsertCallback( _In_ HyperV::ECommand Cmd, _In_ void(*Callback)(uint64_t Input, uint64_t Output, uint64_t OldCR3) )
 	{
 		if (!Callback)
 			return EHvDStatus::InvalidArguments;
@@ -216,7 +216,7 @@ namespace HyperDeceit
 	/*
 	*	Returns a string of the status code.
 	*/
-	const char* GetStatusString( EHvDStatus Status )
+	const char* HvDGetStatusString( EHvDStatus Status )
 	{
 		// Could be written so much better but meh....
 
