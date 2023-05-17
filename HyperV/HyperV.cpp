@@ -54,8 +54,10 @@ namespace HyperDeceit::HyperV
 		ULONG BuildNumber = GetBuildNumber();
 		if (BuildNumber >= WIN10_BN_1709 && BuildNumber <= WIN10_BN_1903)
 			return 0x6080;
-		else if (BuildNumber >= WIN10_BN_1909 && BuildNumber <= WIN11_BN_22H2)
+		else if (BuildNumber >= WIN10_BN_1909 && BuildNumber <= WIN10_BN_22H2)
 			return 0x8380;
+		else if (BuildNumber >= WIN11_BN_21H2 && BuildNumber <= WIN11_BN_22H2)
+			return 0x8700;
 
 		// Should never occur, as there is a check for this in the entry point...
 		PANIC( PANIC_UNSUPPORTED_WINDOWS_VERSION, "Unsupported Version" );
