@@ -17,8 +17,6 @@ The code has not been through proper code review and hence might contain inconsi
 - ???
 
 # Compatibility
-- VBS / HyperGuard compliant.
-- PatchGuard (KPP) compliant.
 - Only supports Windows versions from **Windows 10 1709** to **Windows 11 22H2**.
 
 # Notes
